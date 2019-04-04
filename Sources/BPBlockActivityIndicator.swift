@@ -112,7 +112,7 @@ public extension BPBlockActivityIndicator {
         startBlockAnimation()
         timer = Timer.scheduledTimer(timeInterval: Double(cube?.blockCount ?? 0) * movementSpeed, target: self, selector: #selector(self.startBlockAnimation), userInfo: nil, repeats: true)
         if let timer = timer {
-            RunLoop.current.add(timer, forMode: .commonModes)
+            RunLoop.current.add(timer, forMode: .common)
         }
     }
     
