@@ -24,7 +24,7 @@ internal class BPBlockLayer: CALayer, CommonAnimation {
         CATransaction.begin()
         let animation = positionAnimation(to: position, easing: .easeInOut, duration: duration)
         animation.beginTime = convertTime(CACurrentMediaTime(), from: nil) + beginTime
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
         add(animation, forKey: nil)
         CATransaction.commit()
